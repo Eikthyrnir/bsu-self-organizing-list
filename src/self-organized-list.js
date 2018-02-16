@@ -46,7 +46,15 @@ return curNode.data;
 }
 
 findNode(data) {
-
+var R = this.head;
+while (R!= null)
+{ if (ReturnNode.data == data)
+{
+return R;
+}
+R = R.next;
+}
+return null;
 }
 
 
@@ -55,24 +63,7 @@ toArray() {
 }
 
 removeAt(index) {
-var curNode=this.lenght;
-coun=1;
-bn=null;
-nd=null;
-dn=null;
-if(index===1)
-this.head=curNode.next;
-while(coun<index)
-{curNode=curNode.next;
-coun++;
-}
-bn=curNode.prev;
-nd=curNode;
-N=curNode.next;
-bn.next=N;
-N.prev=bn;
-nd= null;
-this.lenght--;
+
 }
 
 moveToFront(node) {
