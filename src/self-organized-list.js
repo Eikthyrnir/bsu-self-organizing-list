@@ -5,7 +5,7 @@ this.tail = null;
 }
 
 insert(data) {
--
+
   var node = new Node(data);
   if (this.length > 0) {
   this.tail.next = node;
