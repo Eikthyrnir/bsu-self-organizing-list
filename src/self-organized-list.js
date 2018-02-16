@@ -1,53 +1,91 @@
 class Node {
-    constructor(data) {
-        this.data = data;
-        this.next = null;
-        this.prev = null;
-    }
+constructor(data) {
+this.data = data;
+this.next = null;
+this.prev = null;
+}
 }
 
 class SelfOrganizedList {
-    constructor() {
-        this.head = null;
-        this.tail = null;
-    }
+constructor() {
+this.lenght=0;
+this.head = null;
+this.tail = null;
+}
 
-    insert(data) {
+insert(data) {
+var node= new Node(мфдгу);
+if(this.lenght)
+{
+this.tail.next=node;
+node.prev=this.tail;
+this.tail=node;
+}
+else
+{
+this.head=node;
+this.tail=node;
+}
+this.lenght++;
+}
 
-    }
+size() {
+return this.lenght;
+}
 
-    size() {
-        return this.length;
-    }
+at(index) {
+var curNode =this.head;
+lenght=this.lenght;
+coun=0;
+while(coun<index)
+{
+curNode=CurNode.next;
+coun++;
+}
+return curNode.data;
+}
 
-    at(index) {
+findNode(data) {
 
-    }
+}
 
-    findNode(data) {
 
-    }
+toArray() {
 
-    toArray() {
+}
 
-    }
+removeAt(index) {
+var curNode=this.lenght;
+coun=1;
+bn=null;
+nd=null;
+dn=null;
+if(index===1)
+this.head=curNode.next;
+while(coun<index)
+{curNode=curNode.next;
+coun++;
+}
+bn=curNode.prev;
+nd=curNode;
+N=curNode.next;
+bn.next=N;
+N.prev=bn;
+nd= null;
+this.lenght--;
+}
 
-    removeAt(index) {
+moveToFront(node) {
 
-    }
+}
 
-    moveToFront(node) {
+reorganize(data) {
 
-    }
-
-    reorganize(data) {
-
-    }
+}
 
 }
 
 module.exports = {
-    SelfOrganizedList,
-    Node
+SelfOrganizedList,
+Node
 };
- 
