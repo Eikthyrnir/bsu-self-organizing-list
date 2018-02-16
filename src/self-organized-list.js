@@ -63,7 +63,24 @@ toArray() {
 }
 
 removeAt(index) {
-
+var curNode=this.lenght;
+coun=1;
+bn=null;
+nd=null;
+dn=null;
+if(index===1)
+this.head=curNode.next;
+while(coun<index)
+{curNode=curNode.next;
+coun++;
+}
+bn=curNode.prev;
+nd=curNode;
+N=curNode.next;
+bn.next=N;
+N.prev=bn;
+nd= null;
+this.lenght--;
 }
 
 moveToFront(node) {
