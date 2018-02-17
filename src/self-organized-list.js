@@ -103,12 +103,12 @@ class SelfOrganizedList {
         if(this.length==0)
             return;
         
-        var a=this.head;
-        while(a){
-            if(a==node){
+        var a1=this.head;
+        while(a1){
+            if(a1==node){
                 
             }
-            a=a.next;
+            a1=a1.next;
         }
     }
 
