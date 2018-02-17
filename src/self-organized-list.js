@@ -105,15 +105,17 @@ class SelfOrganizedList {
     reorganize(data) {
         var a=this.head;
         while(a){
-            if(a.data==data)
+            if(a.data==data){
                 break;
+            }
             a=a.next;
         }
-        if(!a)
+        if(!a){
             return false;
+        }
 
-        moveToFront(a);
-        return true;
+        //moveToFront(a);
+        //return true;
     }
 
 }
