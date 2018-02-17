@@ -45,13 +45,13 @@ class SelfOrganizedList {
     }
 
     findNode(data) {
-        /*var i=0;
+        var i=0;
         var a=this.head;
         for(var i=0;i<this.length;i++){
             if(a.data==data)
                 return a;
             a=a.next;
-        }*/
+        }
 
         return null;
     }
