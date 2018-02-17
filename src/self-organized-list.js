@@ -58,11 +58,12 @@ class SelfOrganizedList {
 
 
     toArray() {
-        var arr=[];/*
-        a=this.head;
+        var arr=[];
+        var a=this.head;
         for(var i=0;a;i++) {
             arr[i]=a.data;
-        }*/
+            a=a.next;
+        }
         return arr;
     }
 
