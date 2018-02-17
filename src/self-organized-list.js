@@ -100,7 +100,7 @@ class SelfOrganizedList {
     }
 
     moveToFront(node) {
-        if(this.length<2||this.head==node)
+        if(this.length==0)
             return;
 
         var a=this.head;
