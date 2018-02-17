@@ -8,7 +8,7 @@ class Node {
 
 class SelfOrganizedList {
     constructor() {
-        this.lenght_=0;
+        this.lenght_=null;
         this.head = null;
         this.tail = null;
     }
@@ -18,7 +18,7 @@ class SelfOrganizedList {
     }
 
     size() {
-        //return this.lenght_;
+        return this.lenght_;
     }
 
     at(index) {
