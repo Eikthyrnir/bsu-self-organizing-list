@@ -100,13 +100,20 @@ class SelfOrganizedList {
     }
 
     moveToFront(node) {
-        if(this.length==0)
+        if(this.length<2)
             return;
-        
+
         var a=this.head;
         while(a){
             if(a==node){
-                
+                while(a){
+                    if(a==this.head)
+                        return;
+                    var tmp=a;
+                    var tmp1=a.prev;
+                    a.prev=tmp;
+                    a=tmp;
+                }
             }
             a=a.next;
         }
