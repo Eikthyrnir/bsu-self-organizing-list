@@ -73,8 +73,9 @@ class SelfOrganizedList {
             before.next=after;
             after.prev=before;
 
-            this.length--;
+            
         }
+        this.length--;
     }
 
     moveToFront(node) {
