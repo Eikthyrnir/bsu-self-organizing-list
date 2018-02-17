@@ -14,20 +14,12 @@ class SelfOrganizedList {
     }
 
     insert(data) {
-        if(this.length_==0) {
-            this.head = instanceOf(data);
-            this.tail = this.head;
-        }
-        else{
-            this.tail.next=instanceOf(data);
-            data.prev=this.tail;
-            this.tail=instanceOf(data);
-        }
+        
         this.length_++;
     }
 
     size() {
-        //return this.lenght_;
+        return this.lenght_;
     }
 
     at(index) {
@@ -41,7 +33,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-            //this.lenght_--;
+        this.lenght_--;
     }
 
     moveToFront(node) {
