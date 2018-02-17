@@ -61,7 +61,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-        if(index>=0&&index<this.length) {
+        /*if(index>=0&&index<this.length) {
             var a=this.head;
 
             for(var i=0;i<index;i++){
@@ -74,7 +74,7 @@ class SelfOrganizedList {
             after.prev=before;
 
             
-        }
+        }*/
         this.length--;
     }
 
