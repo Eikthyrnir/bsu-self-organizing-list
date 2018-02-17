@@ -100,6 +100,16 @@ class SelfOrganizedList {
     }
 
     moveToFront(node) {
+        if(this.length==0)
+            return;
+        
+        var a=this.head;
+        while(a){
+            if(a==node){
+                
+            }
+            a=a.next;
+        }
     }
 
     reorganize(data) {
