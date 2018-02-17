@@ -32,9 +32,9 @@ class SelfOrganizedList {
     }
 
     at(index) {
-        /*if(index<0&&index>=this.length){
+        if(index<0||index>=this.length){
             return null;
-        }
+        }/*
         var i=0;
         var a=this.head;
         while(i<index){
