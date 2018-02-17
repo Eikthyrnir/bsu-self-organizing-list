@@ -42,6 +42,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
+        this.length--;
     }
 
     moveToFront(node) {
