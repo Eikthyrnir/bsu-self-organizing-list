@@ -64,17 +64,31 @@ class SelfOrganizedList {
         if(index<0&&index>=this.length)
             return;
 
-        var a=this.head;
+        var a = this.head;
+        if(index==0){
+            this.head=this.head.next;
 
-        for(var i=0;i<index;i++){
-            a=a.next;
-        }
+            if(this.length>1) {
+                this.head.prev = null;
+            }
+            else {
+                this.tail = null;
+            }
+        }else
+            if(index==this.length-1){
+                this.tail=this.tail.prev;
+                this.tail.next=null;
+            }
+            else {
+                for (var i = 0; i < index; i++) {
+                    a = a.next;
+                }
 
-        var before=a.prev;
-        var after=a.next;
-        before.next=after;
-        after.prev=before;
-
+                var before = a.prev;
+                var after = a.next;
+                before.next = after;
+                after.prev = before;
+            }
         this.length--;
     }
 
