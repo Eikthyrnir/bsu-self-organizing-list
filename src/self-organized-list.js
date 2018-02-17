@@ -112,6 +112,7 @@ class SelfOrganizedList {
                     a.prev=tmp;
                     a=a.prev;
                 }
+                return;
             }
             a=a.next;
         }
