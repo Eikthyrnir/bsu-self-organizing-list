@@ -104,18 +104,18 @@ class SelfOrganizedList {
             return;
 
         var a=this.head;
-        /*while(a){
+        while(a){
             if(a==node){
-                while(a){
+                /*while(a){
                     var tmp=a.data;
                     a.data=a.prev.data;
                     a.prev.data=tmp;
                     a=a.prev;
-                }
+                }*/
                 return;
             }
             a=a.next;
-        }*/
+        }
     }
 
     reorganize(data) {
