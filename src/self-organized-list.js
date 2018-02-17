@@ -64,18 +64,49 @@ class SelfOrganizedList {
         if(index<0&&index>=this.length)
             return;
         
-        /*var a=this.head;
+        // JavaScript source code
+var currentNode = this.head,
+    length = this.length,
+    count = 1,
+    message = { failure: 'Failure: non-existent node in this list.' },
+    beforeNodeToDelete = null,
+    nodeToDelete = null,
+    deletedNode = null;
 
-        for(var i=0;i<index;i++){
-            a=a.next;
-        }
+// 2-ой случай: первый узел удален
+if (index === 1) {
+    this.head = currentNode.next;
 
-        var before=a.prev;
-        var after=a.next;
-        before.next=after;
-        after.prev=before;*/
+    // 2-ой случай: существует второй узел
+    if (!this.head) {
+        this.head.previous = null;
+        // 2-ой случай: второго узла не существует
+    } else {
+        this.tail = null;
+    }
 
-        this.length--;
+    // 3-ий случай: последний узел удален
+} else if (index === this.length) {
+    this.tail = this.tail.previous;
+    this.tail.next = null;
+    // 4-ый случай: средний узел удален
+} else {
+    while (count < index) {
+        currentNode = currentNode.next;
+        count++;
+    }
+
+    beforeNodeToDelete = currentNode.previous;
+    nodeToDelete = currentNode;
+    afterNodeToDelete = currentNode.next;
+
+    beforeNodeToDelete.next = afterNodeToDelete;
+    afterNodeToDelete.previous = beforeNodeToDelete;
+    deletedNode = nodeToDelete;
+    nodeToDelete = null;
+}
+
+this.length--;
     }
 
     moveToFront(node) {
