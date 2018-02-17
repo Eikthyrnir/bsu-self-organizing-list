@@ -109,7 +109,7 @@ class SelfOrganizedList {
                 while(a){
                     var tmp=a.data;
                     a.data=a.prev.data;
-                    a.prev=tmp;
+                    a.prev.data=tmp;
                     a=a.prev;
                 }
                 return;
