@@ -61,20 +61,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-        if(index>=0&&index<this.length) {
-            a=this.head;
-
-            for(var i=0;i<index;i++){
-                a=a.next;
-            }
-
-            var before=a.prev;
-            var after=a.next;
-            before.next=after;
-            after.prev=before;
-            
-            this.length--;
-        }
+        this.length--;
     }
 
     moveToFront(node) {
