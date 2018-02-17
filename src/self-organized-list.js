@@ -103,6 +103,17 @@ class SelfOrganizedList {
     }
 
     reorganize(data) {
+        var a=this.head;
+        while(a){
+            if(a.data==data)
+                break;
+            a=a.next;
+        }
+        if(!a)
+            return false;
+
+        moveToFront(a);
+        return true;
     }
 
 }
