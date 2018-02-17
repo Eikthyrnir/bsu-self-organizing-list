@@ -41,6 +41,9 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
+        if(index<lenght_ && index>0){
+            this.lenght_--;
+        }
     }
 
     moveToFront(node) {
