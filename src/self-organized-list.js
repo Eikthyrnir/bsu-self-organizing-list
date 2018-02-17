@@ -120,7 +120,7 @@ class SelfOrganizedList {
         var a=this.head;
         for(var i=0;i<this.length;i++){
             if(a.data==data){
-                moveToFront(a);
+                //moveToFront(a);
                 return true;
             }
             a=a.next;
