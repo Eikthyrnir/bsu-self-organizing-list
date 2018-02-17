@@ -42,7 +42,7 @@ class SelfOrganizedList {
 
     removeAt(index) {
         if(index<=this.lenght_ && index>=0){
-            this.lenght_--;
+           // this.lenght_--;
         }
     }
 
