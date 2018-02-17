@@ -15,13 +15,13 @@ class SelfOrganizedList {
 
     insert(data) {
         if(this.length_==0) {
-            this.head = instanceOf(data);
+            this.head.data = data;
             this.tail = this.head;
         }
         else{
-            this.tail.next=instanceOf(data);
+            this.tail.next.data=data;
             data.prev=this.tail;
-            this.tail=data;
+            this.tail.data=data;
         }
         this.length++;
     }
