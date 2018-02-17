@@ -116,14 +116,14 @@ class SelfOrganizedList {
         if(this.length==0)
             return false;
 
+        var i=0;
         var a=this.head;
-        while(a){
-            if(a.data==data) {
-                moveToFront(a);
+        for(var i=0;i<this.length;i++){
+            if(a.data==data)
                 return true;
-            }
             a=a.next;
         }
+
         return false;  
     }
 
