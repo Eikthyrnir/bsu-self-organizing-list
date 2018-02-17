@@ -8,7 +8,7 @@ class Node {
 
 class SelfOrganizedList {
     constructor() {
-        this.lenght_=1;
+        this.lenght_;
         this.head = null;
         this.tail = null;
     }
