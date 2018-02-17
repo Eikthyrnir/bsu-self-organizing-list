@@ -23,7 +23,7 @@ class SelfOrganizedList {
             data.prev=this.tail;
             this.tail=data;
         }*/
-        this.length_++;
+        //this.length_++;
     }
 
     size() {
@@ -41,7 +41,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-            this.lenght_--;
+            //this.lenght_--;
     }
 
     moveToFront(node) {
