@@ -58,6 +58,12 @@ class SelfOrganizedList {
 
 
     toArray() {
+        var arr=[];
+        a=this.head;
+        for(var i=0;a;i++) {
+            arr[i]=a.data;
+        }
+        return arr;
     }
 
     removeAt(index) {
