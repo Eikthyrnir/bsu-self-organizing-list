@@ -8,27 +8,27 @@ class Node {
 
 class SelfOrganizedList {
     constructor() {
-        this.length_=0;
+        this.length=0;
         this.head = null;
         this.tail = null;
     }
 
     insert(data) {
-        if(this.length_==0) {
+        if(this.length==0) {
             this.head.data = data;
             this.tail = this.head;
         }
         else{
-            this.tail.next.data=data;
+            this.tail.next=data;
             data.prev=this.tail;
             this.tail.data=data;
         }
         this.length++;
-        alert(this.length_)
+        //alert(this.length);
     }
 
     size() {
-        return this.length_;
+        return this.length;
     }
 
     at(index) {
@@ -42,8 +42,8 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-        if(index<length_ && index>=0){
-            this.length_--;
+        if(index<this.length && index>=0){
+            this.length--;
         }
     }
 
