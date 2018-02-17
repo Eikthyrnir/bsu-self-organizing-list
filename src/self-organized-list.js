@@ -14,7 +14,7 @@ class SelfOrganizedList {
     }
 
     insert(data) {
-        /*if(this.length_==0) {
+        if(this.length_==0) {
             this.head = data;
             this.tail = this.head;
         }
@@ -22,7 +22,7 @@ class SelfOrganizedList {
             this.tail.next=data;
             data.prev=this.tail;
             this.tail=data;
-        }*/
+        }
         this.length++;
     }
 
