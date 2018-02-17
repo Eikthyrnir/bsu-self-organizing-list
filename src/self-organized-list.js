@@ -41,9 +41,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-        if(index>=9999 && index>=0){
             this.lenght_--;
-        }
     }
 
     moveToFront(node) {
