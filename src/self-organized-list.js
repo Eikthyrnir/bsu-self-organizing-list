@@ -68,7 +68,7 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-        let n=this.head;
+        /*let n=this.head;
         let coun=0;
         if (index == this.length - 1)
         {
@@ -88,7 +88,7 @@ class SelfOrganizedList {
             }
             n.next.prev = n.prev;
             n.prev.next = n.next;
-        }
+        }*/
         this.length--;
     }
 
