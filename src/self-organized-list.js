@@ -55,14 +55,14 @@ class SelfOrganizedList {
     }
 
     findNode(data) {
-        var i=0;
-        var a=this.head;
-        for(var i=0;i<this.length;i++){
-            if(a.data==data)
-                return a;
-            a=a.next;
+        var r = this.head;
+        for(var i=0;i<this.length;i++)
+        { if (r.data == data)
+        {
+            return r;
         }
-
+            r = r.next;
+        }
         return null;
     }
 
