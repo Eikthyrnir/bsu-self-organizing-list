@@ -94,14 +94,14 @@ class SelfOrganizedList {
             if (index == 0) {
                 this.head = this.head.next;
                 this.head.prev = null;
-            }/*else{
+            }else{
                 while (coun < index) {
                     coun++;
                     n = n.next;
                 }
                 n.next.prev = n.prev;
                 n.prev.next = n.next;
-            }*/
+            }
         this.length--;
     }
 
