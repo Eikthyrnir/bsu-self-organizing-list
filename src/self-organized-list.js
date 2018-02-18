@@ -38,16 +38,20 @@ class SelfOrganizedList {
     }
 
     at(index) {
-        if(index<0||index>=this.length){
-            return null;
-        }
         var i=0;
-        var a=this.head;
-        while(i<index){
-            a=a.next;
-            i++;
+        var node=this.head;
+        if( this.lenght==0||index>this.lenght||index<0)
+        { return null;
+
         }
-        return a.data;
+        if(index==0)
+            return this.head.data;
+        else
+        {
+            for(;i<index;i++)
+                node=node.next;
+            return node.data;
+        }
     }
 
     findNode(data) {
