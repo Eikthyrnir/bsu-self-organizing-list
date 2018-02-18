@@ -82,9 +82,9 @@ class SelfOrganizedList {
         let coun = 0;
         if (index == this.length - 1) {
             this.tail = this.tail.prev;
-            
+            this.tail.next = null;
             if(this.length>1) {
-                this.tail.next = null;
+                
             }
             else {
                 this.head = null;
