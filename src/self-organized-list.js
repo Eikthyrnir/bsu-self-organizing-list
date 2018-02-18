@@ -25,7 +25,7 @@ class SelfOrganizedList {
         else
         {
             this.head=node;
-            this.tail=node;
+            this.tail=this.head;
         }
         this.lenght++;
     }
