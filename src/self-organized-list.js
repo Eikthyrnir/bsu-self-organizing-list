@@ -31,6 +31,9 @@ class SelfOrganizedList {
     }
 
     size() {
+        if(this.length===0){
+            return 0;
+        }
         return this.length;
     }
 
