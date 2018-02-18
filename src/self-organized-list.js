@@ -40,7 +40,7 @@ class SelfOrganizedList {
     at(index) {
         var i=0;
         var node=this.head;
-        if( this.lenght==0||index>this.lenght||index<0)
+        if( this.lenght==0||index>=this.lenght||index<0)
         { return null;
 
         }
