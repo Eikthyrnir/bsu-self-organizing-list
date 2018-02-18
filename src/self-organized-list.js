@@ -80,17 +80,18 @@ class SelfOrganizedList {
     removeAt(index) {
         let n=this.head;
         let coun=0;
-        if (index == this.length - 1)
+        if (index == 0)
+            {
+                this.head = this.head.next;
+                this.head.prev = null;
+            }        
+        else
+            if (index == this.length - 1)
         {
             this.tail = this.tail.prev;
             this.tail.next = null;
         }
-        else
-            if (index == 0)
-            {
-                this.head = this.head.next;
-                this.head.prev = null;
-            }else{
+            else{
             while(coun<index)
             {
                 coun++;
