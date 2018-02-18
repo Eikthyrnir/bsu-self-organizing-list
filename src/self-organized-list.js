@@ -84,7 +84,7 @@ class SelfOrganizedList {
             this.tail = this.tail.prev;
             this.tail.next = null;
         }
-        else{
+        else
             if (index == 0)
             {
                 this.head = this.head.next;
@@ -97,7 +97,6 @@ class SelfOrganizedList {
             }
             n.next.prev = n.prev;
             n.prev.next = n.next;
-        }
         }
         this.length--;
     }
