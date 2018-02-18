@@ -81,10 +81,9 @@ class SelfOrganizedList {
         let n = this.head;
         let coun = 0;
         if (index == this.length - 1) {
-            this.tail = this.tail.prev;
-            this.tail.next = null;
+            this.tail = this.tail.prev; 
             if(this.length>1) {
-                
+                this.tail.next = null;
             }
             else {
                 this.head = null;
@@ -106,22 +105,14 @@ class SelfOrganizedList {
     }
 
     moveToFront(node) {
-        if(this.length==0)
-            return;
-
-        var a=this.head;
-        while(a){
-            if(a==node){
-                while(a!=this.head){
-                    var tmp=a.data;
-                    a.data=a.prev.data;
-                    a.prev.data=tmp;
-                    a=a.prev;
-                }
-                return;
-            }
-            a=a.next;
+        var tmp, zn = node.data;
+        while (node != this.head) {
+            tmp = node.prev.data;
+            node.prev.data = node.data;
+            node.data = tmp;
+            node = node.prev;
         }
+        this.head.data = zn;
     }
 
     reorganize(data) {
