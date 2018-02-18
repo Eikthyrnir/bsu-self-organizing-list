@@ -97,8 +97,8 @@ class SelfOrganizedList {
                 coun++;
                 n=n.next;
             }
-            var before = a.prev;
-                var after = a.next;
+            var before = n.prev;
+                var after = n.next;
                 before.next = after;
                 after.prev = before;
             }
