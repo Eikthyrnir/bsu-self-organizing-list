@@ -68,13 +68,13 @@ class SelfOrganizedList {
 
 
     toArray() {
-        var arr=[];
-        var a=this.head;
-        for(var i=0;a;i++) {
-            arr[i]=a.data;
-            a=a.next;
+        var pushnod=this.head;
+        var masss = [];
+        while (pushnod!= null) {
+            masss.push(pushnod.data);
+            pushnod = pushnod.next;
         }
-        return arr;
+        return masss;
     }
 
     removeAt(index) {
