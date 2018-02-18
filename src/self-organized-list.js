@@ -89,7 +89,7 @@ class SelfOrganizedList {
             {
                 this.head = this.head.next;
                 this.head.prev = null;
-            }
+            }else{
             while(coun<index)
             {
                 coun++;
@@ -97,6 +97,7 @@ class SelfOrganizedList {
             }
             n.next.prev = n.prev;
             n.prev.next = n.next;
+        }
         }
         this.length--;
     }
