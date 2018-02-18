@@ -78,34 +78,27 @@ class SelfOrganizedList {
     }
 
     removeAt(index) {
-        if(index<0&&index>=this.length)
-            return;
-
-        var a = this.head;
-        if(index==0){
-            this.head=this.head.next;
-
-            if(this.length>1) {
+        let n=this.head;
+        let coun=0;
+        if (index == this.length - 1)
+        {
+            this.tail = this.tail.prev;
+            this.tail.next = null;
+        }
+        else{
+            if (index == 0)
+            {
+                this.head = this.head.next;
                 this.head.prev = null;
             }
-            else {
-                this.tail = null;
+            while(coun<index)
+            {
+                coun++;
+                n=n.next;
             }
-        }else
-            if(index==this.length-1){
-                this.tail=this.tail.prev;
-                this.tail.next=null;
-            }
-            else {
-                for (var i = 0; i < index; i++) {
-                    a = a.next;
-                }
-
-                var before = a.prev;
-                var after = a.next;
-                before.next = after;
-                after.prev = before;
-            }
+            n.next.prev = n.prev;
+            n.prev.next = n.next;
+        }
         this.length--;
     }
 
